@@ -1,0 +1,12 @@
+<div>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: %w(chinese italian japanese french belgian) %>
+    <%= f.submit "Submit review", class: "mt-2 btn btn-secondary w-100" %>
+  <% end %>
+</div>
+<%= link_to restaurants_path do %>
+  <div class="mt-2 btn btn-info w-100">Back to restaurants</div>
+<%end%>
